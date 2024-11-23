@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %}AI Support Chat{% endblock %}
+
+{% block content %}
+<div class="content">
+    <h2>AI Support Chat</h2>
+    <form method="POST" action="{% url 'ai_support' %}">
+        {% csrf_token %}
+        <textarea name="user_input" rows="4" placeholder="What's on your mind?" required></textarea>
+        <button type="submit" class="btn btn-primary">Send</button>
+    </form>
+    {% if chat_response %}
+        <div class="response">
+            <h3>AI Response:</h3>
+            <p>{{ chat_response }}</p>
+        </div>
+    {% endif %}
+</div>
+{% endblock %}

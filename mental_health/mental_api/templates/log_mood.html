@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h2>Log Your Mood</h2>
+    <form method="POST">
+        {% csrf_token %}
+        <label for="mood">Select your mood:</label>
+        <select name="mood" id="mood" required>
+            <option value="happy">Happy</option>
+            <option value="sad">Sad</option>
+            <option value="stressed">Stressed</option>
+            <option value="neutral">Neutral</option>
+        </select>
+        <button type="submit">Log Mood</button>
+    </form>
+{% endblock %}

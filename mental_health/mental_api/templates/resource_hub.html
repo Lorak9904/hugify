@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h2>Mental Health Resources</h2>
+    <ul>
+        {% for resource in resources %}
+            <li><a href="{{ resource.url }}" target="_blank">{{ resource.title }}</a></li>
+        {% endfor %}
+    </ul>
+{% endblock %}

@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h2>Your Mood History</h2>
+    <ul>
+        {% for entry in mood_entries %}
+            <li>{{ entry.date }} - {{ entry.mood }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

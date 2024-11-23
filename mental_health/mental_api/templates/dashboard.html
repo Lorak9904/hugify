@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h2>Your Weekly Summary</h2>
+    <ul>
+        <li>Happy Days: {{ mood_summary.happy }}</li>
+        <li>Sad Days: {{ mood_summary.sad }}</li>
+        <li>Stressed Days: {{ mood_summary.stressed }}</li>
+        <li>Neutral Days: {{ mood_summary.neutral }}</li>
+    </ul>
+{% endblock %}

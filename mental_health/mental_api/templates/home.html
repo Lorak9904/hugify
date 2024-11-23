@@ -1,11 +1,44 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <p>asldnanfanjds</p>
-</body>
-</html>
+{% extends 'base.html' %}
+
+{% block title %}Home - Mental Health Chat{% endblock %}
+
+{% block content %}
+    <header>
+        <h1>Welcome to Hugify - Mental Health Matters</h1>
+    </header>
+
+    <section id="chat-section">
+        <h2>AI-Powered Support Chat</h2>
+        <form id="chat-form" method="POST">
+            {% csrf_token %}
+            <textarea name="user_input" id="user_input" rows="4" placeholder="How are you feeling today?" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+        <div id="response">
+            {% if chat_response %}
+                <p><strong>AI Response:</strong> {{ chat_response }}</p>
+            {% endif %}
+        </div>
+    </section>
+
+    <section id="mood-log-section">
+        <h2>Log Your Mood</h2>
+        <form method="POST" action="{% url 'log_mood' %}">
+            {% csrf_token %}
+            <label for="mood">Select your mood:</label>
+            <select name="mood" id="mood" required>
+                <option value="happy">Happy</option>
+                <option value="sad">Sad</option>
+                <option value="stressed">Stressed</option>
+                <option value="neutral">Neutral</option>
+            </select>
+            <button type="submit">Log Mood</button>
+        </form>
+    </section>
+
+    <section id="education-section">
+        <h2>Mental Health Education</h2>
+        <p>Learn about coping strategies and emotional resilience.</p>
+        <a href="/education">Explore Now</a>
+    </section>
+{% endblock %}
