@@ -1,0 +1,120 @@
+/* General Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+}
+
+/* Navbar Fix */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #343a40; /* Bootstrap dark */
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Main Content Layout */
+.container {
+    margin-top: 80px; /* Space below the fixed navbar */
+    margin-bottom: 60px; /* Space above footer */
+    padding: 20px;
+    width: 80%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Header Style */
+header {
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+/* Typography */
+h1 {
+    color: #007bff;
+    font-size: 2.5em;
+    margin: 0;
+}
+
+h2 {
+    color: #333;
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
+/* Buttons */
+button, .btn-primary {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+button:hover, .btn-primary:hover {
+    background-color: #0056b3;
+}
+
+/* Form Elements */
+textarea, select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Section Styles */
+section {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+/* Footer Fix */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #343a40;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 0.9em;
+    height: 5px;
+}
+
+/* Media Query for Mobile */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    button, .btn-primary {
+        padding: 8px 16px;
+        font-size: 0.9em;
+    }
+}
