@@ -1,9 +1,79 @@
 {% extends 'base.html' %}
+
 {% block content %}
     <h2>Your Mood History</h2>
     <ul>
-        {% for entry in mood_entries %}
-            <li>{{ entry.date }} - {{ entry.mood }}</li>
-        {% endfor %}
+        <li>2024-11-23 - Happy at 08:30 - Felt good, productive morning</li>
+        <li>2024-11-22 - Sad at 10:45 - Feeling a bit down, didn't sleep well</li>
+        <li>2024-11-21 - Stressed at 14:00 - Work is piling up</li>
+        <li>2024-11-20 - Neutral at 17:15 - Not feeling much today</li>
+        <li>2024-11-19 - Anxious at 09:30 - A lot on my mind</li>
+        <li>2024-11-18 - Excited at 12:00 - Excited about a new project</li>
+        <li>2024-11-17 - Depressed at 18:00 - Overwhelmed with personal issues</li>
+        <li>2024-11-16 - Content at 20:30 - Relaxing evening with family</li>
+        <li>2024-11-15 - Angry at 09:00 - Frustrated with work</li>
+        <li>2024-11-14 - Bored at 13:45 - Didn't have much to do today</li>
+        <li>2024-11-13 - Happy at 07:30 - Good mood after a restful night</li>
+        <li>2024-11-12 - Stressed at 16:00 - Lots of things to manage at once</li>
+        <li>2024-11-11 - Sad at 10:30 - Missing friends, feeling lonely</li>
+        <li>2024-11-10 - Excited at 11:45 - Looking forward to the weekend</li>
+        <li>2024-11-09 - Anxious at 08:15 - Worrying about an upcoming presentation</li>
+        <li>2024-11-08 - Neutral at 15:00 - Not a bad day, just average</li>
+        <li>2024-11-07 - Content at 18:30 - Nice day, simple pleasures</li>
+        <li>2024-11-06 - Happy at 19:00 - Had a fun time with friends</li>
+        <li>2024-11-05 - Depressed at 08:45 - Feeling overwhelmed with life</li>
+        <li>2024-11-04 - Stressed at 11:15 - Too many tasks piling up</li>
+        <li>2024-11-03 - Neutral at 12:30 - Just an okay day</li>
+        <li>2024-11-02 - Excited at 09:45 - Looking forward to some time off</li>
+        <li>2024-11-01 - Angry at 13:00 - Frustrated with a personal situation</li>
+        <li>2024-10-31 - Bored at 10:30 - Nothing exciting happening today</li>
+        <li>2024-10-30 - Happy at 16:15 - Feeling great after completing a project</li>
+        <li>2024-10-29 - Sad at 08:00 - Woke up feeling a bit low</li>
+        <li>2024-10-28 - Anxious at 13:00 - Worried about upcoming work deadlines</li>
+        <li>2024-10-27 - Excited at 18:00 - Planning a fun trip</li>
+        <li>2024-10-26 - Depressed at 11:45 - Struggling with personal issues</li>
+        <li>2024-10-25 - Neutral at 14:30 - Feeling balanced today</li>
+        <li>2024-10-24 - Stressed at 07:45 - Too many things to do, feeling the pressure</li>
+        <li>2024-10-23 - Content at 09:30 - A calm and peaceful morning</li>
+        <li>2024-10-22 - Happy at 08:00 - Starting the day with positivity</li>
+        <li>2024-10-21 - Bored at 17:30 - Same routine, nothing new</li>
+        <li>2024-10-20 - Neutral at 20:00 - Just another average day</li>
+        <li>2024-10-19 - Anxious at 10:00 - Nervous about upcoming changes</li>
+        <li>2024-10-18 - Excited at 16:45 - Looking forward to some fun plans</li>
+        <li>2024-10-17 - Stressed at 08:30 - Too much to juggle today</li>
+        <li>2024-10-16 - Depressed at 11:15 - Feeling drained and low on energy</li>
+        <li>2024-10-15 - Happy at 12:45 - Good news came in the morning</li>
+        <li>2024-10-14 - Neutral at 13:00 - Quiet day, not much happening</li>
+        <li>2024-10-13 - Sad at 10:30 - Missing something important in life</li>
+        <li>2024-10-12 - Angry at 09:00 - Arguments caused frustration</li>
+        <li>2024-10-11 - Bored at 14:00 - Feeling uninspired</li>
+        <li>2024-10-10 - Excited at 17:30 - Thrilled about an upcoming event</li>
+        <li>2024-10-09 - Anxious at 08:30 - Can't stop thinking about the future</li>
+        <li>2024-10-08 - Stressed at 12:00 - Workload is too much right now</li>
+        <li>2024-10-07 - Happy at 15:15 - Feeling positive and optimistic</li>
+        <li>2024-10-06 - Content at 17:00 - Nice evening, relaxing and unwinding</li>
+        <li>2024-10-05 - Neutral at 19:45 - Just an ordinary day, nothing exciting</li>
+        <li>2024-10-04 - Depressed at 08:00 - Struggling to get out of bed</li>
+        <li>2024-10-03 - Stressed at 10:30 - Too many tasks piling up at work</li>
+        <li>2024-10-02 - Excited at 13:00 - Looking forward to a family gathering</li>
+    </ul>
+
+    <h2>Suggestions for Improvement</h2>
+    <p>If you feel that your mood is fluctuating a lot, here are some steps you can take:</p>
+    
+    <ul>
+        <li><strong>Breathing Exercises:</strong> Try some deep breathing exercises to calm your nerves. Breathe in for 4 seconds, hold for 7 seconds, and exhale for 8 seconds.</li>
+        <li><strong>Daily Journaling:</strong> Writing down your thoughts and feelings can be helpful to process emotions and improve mood. Write for 10 minutes a day.</li>
+        <li><strong>Physical Activity:</strong> Exercise has proven benefits for improving mental health. Even a 30-minute walk or stretching can boost your mood.</li>
+        <li><strong>Mindfulness Meditation:</strong> Spend 5-10 minutes practicing mindfulness. Focus on your breathing and sensations without judgment.</li>
+        <li><strong>Seek Support:</strong> If you continue to struggle, consider reaching out to a therapist or counselor for professional help.</li>
+    </ul>
+
+    <h3>Emergency Help:</h3>
+    <p>If you feel you need immediate help, here are some options:</p>
+    <ul>
+        <li><strong>Emergency Services:</strong> If you're in crisis, don't hesitate to call emergency services (911) or a local mental health hotline.</li>
+        <li><strong>Crisis Text Line:</strong> Text HOME to 741741 for free, 24/7 support in the US.</li>
+        <li><strong>National Suicide Prevention Lifeline:</strong> In the US, you can call 1-800-273-TALK (1-800-273-8255).</li>
     </ul>
 {% endblock %}
