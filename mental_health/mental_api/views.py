@@ -133,7 +133,7 @@ def log_mood(request):
     if request.method == "POST":
         mood = request.POST.get("mood")
         notes = request.POST.get("notes", "")
-        MoodLog.objects.create(user=request.user, mood=mood)
+        MoodLog.objects.create(mood=mood)
         # Save the data (this could be a database save in a real app)
         messages.success(request, f"Mood '{mood}' logged successfully!")
         return redirect("home")
