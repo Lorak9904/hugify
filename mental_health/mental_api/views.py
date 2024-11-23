@@ -81,40 +81,28 @@ def home(request):
     if request.method == "POST":
         user_input = request.POST.get("user_input")
         # Send text to AI for emotion analysis
-        chat_response = """
-1. Practice Gratitude
-Write down three things you're grateful for, even if they're small. It could be something as simple as the warmth of your blanket or a good cup of coffee. Focusing on positive things can shift your mindset.
-
-2. Move Your Body
-Physical movement, even just a short walk, can release endorphins and improve your mood. If you can, try to get outside and breathe in some fresh air, even if it’s for just five minutes.
-
-3. Listen to Uplifting Music
-Music has a powerful impact on our emotions. Find a playlist of songs that make you feel good or are calming. Sometimes, music can speak when words fall short.
-
-4. Limit Social Media
-Sometimes, scrolling can make us feel worse. Try taking a short break from social media or setting a time limit. This can help reduce feelings of comparison or anxiety.
-
-5. Be Kind to Yourself
-When we’re feeling low, we can be really hard on ourselves. Remind yourself that it’s okay to feel sad sometimes, and that you're doing the best you can. Self-compassion can make a huge difference.
-
-6. Do Something Creative
-Whether it's doodling, journaling, cooking, or even organizing something in your space, creative activities can help get your mind off things and give you a sense of accomplishment.
-
-7. Connect with a Friend or Loved One
-Even a brief chat with someone you trust can help you feel more connected and supported. Sometimes sharing how you're feeling, even if it's just a little, can lighten the load.
-
-8. Practice Deep Breathing or Meditation
-Take five deep breaths, breathing in for a count of four and exhaling for a count of six. This can help lower stress levels and give your mind a reset. You could also try a short guided meditation to help calm your thoughts.
-
-9. Focus on What You Can Control
-When things feel overwhelming, focus on small, manageable tasks that are in your control. It can help you regain a sense of agency and accomplishment.
-
-10. Give Yourself a Break
-If you've been pushing yourself hard, it might be time for a pause. Take a few minutes (or more) to just rest and recharge—guilt-free. Your well-being matters.
-
-I hope some of these resonate with you! You don’t have to feel positive all the time, but even tiny steps can help lift you up. If you want to talk more, I’m here!
-
-"""
+        chat_response = [
+    "I'm really sorry that you're feeling this way right now. Please remember that it's completely okay to not feel okay sometimes. Life can be incredibly overwhelming, and it's natural to go through tough periods. Just take things one step at a time, and don't hesitate to reach out if you need someone to talk to. You're not alone in this, and it's okay to lean on others for support.",
+    
+    "I'm truly sorry you're going through such a difficult time. Please know that it's okay to feel the way you're feeling. Sometimes our minds and hearts need time to heal, and it's important to give yourself the space to do that. You're incredibly strong for acknowledging how you're feeling, and I hope you can find comfort in knowing that this tough time will eventually pass. Please be kind to yourself and take it one day at a time.",
+    
+    "I'm really sorry that you're struggling. I want you to know that feeling like this doesn't mean you're weak or failing in any way. It's just a part of being human. Everyone goes through difficult moments, and it's okay to experience pain. You deserve to take care of yourself during this time, and it's okay to not have all the answers right now. You're doing the best you can, and that is enough.",
+    
+    "It sounds like you're carrying a heavy load right now, and I want to remind you that it's okay to feel how you feel. You don't have to push through everything on your own. It's okay to ask for help when you're ready, and you are worthy of care and support. Please take time for yourself, even if it's just in small ways, and know that there are people who care about you and want to help you get through this.",
+    
+    "I’m so sorry you're feeling this way, but please remember that these tough moments don’t define you. They’re just a chapter in your life, and though it feels impossible right now, things can get better. You're not alone in this, and there are so many people who have gone through similar struggles and found light at the end of the tunnel. Take one step at a time, and don't forget to be gentle with yourself. You deserve peace and healing.",
+    
+    "I'm really sorry to hear you're struggling right now. It's okay to not feel okay, and it’s important to honor your feelings rather than push them aside. Your mental health matters, and you deserve to feel better. Don't be too hard on yourself, and remember that even small steps toward healing count. You've faced challenges before, and you have the strength to get through this one too. Take your time and know that better days are ahead.",
+    
+    "I'm so sorry you're feeling like this. Please remember that your emotions are valid, and you're allowed to take a break from everything when you need to. Life can feel really heavy at times, but these feelings will not last forever. You deserve to give yourself grace and patience during this time. If you're able, try to talk to someone you trust or a professional who can help guide you through this. You're doing the best you can, and that’s enough.",
+    
+    "I'm really sorry that you're going through this, but please know that it’s okay to not be okay. Sometimes life gets so overwhelming that it feels like there's no way out, but that's not the truth. There is hope, and you are worthy of healing. It's important to allow yourself to feel everything you're going through without guilt. Just take one step at a time, and remember that people care about you and are here to support you in whatever way you need.",
+    
+    "I'm so sorry you're feeling this way, and I want to remind you that it's okay to feel overwhelmed. It's part of being human, and it doesn’t mean you’re failing. It’s okay to have hard days. Please try to be gentle with yourself. Healing takes time, and there's no rush. You are doing your best, and that is enough. It’s important to take breaks and practice self-care, even if it’s just for a few moments each day. Better days are ahead, even if it doesn't feel like it right now.",
+    
+    "I'm really sorry you're feeling this way, but I want to remind you that you're not alone, even though it might feel like it. It's okay to feel down, and it's okay to ask for help when you need it. Your feelings are valid, and it's important to take care of yourself during difficult times. Please don't hesitate to reach out to someone, whether it's a friend, family member, or a professional. You deserve support, and you deserve to feel better. Take things one step at a time, and know that you're stronger than you think."
+]
+        chat_response = random.choice(chat_response)
     
     return render(request, 'home.html', {'chat_response': chat_response})
 
