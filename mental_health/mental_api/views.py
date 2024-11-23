@@ -80,7 +80,40 @@ def home(request):
     if request.method == "POST":
         user_input = request.POST.get("user_input")
         # Send text to AI for emotion analysis
-        chat_response = analyze_emotion(user_input)
+        chat_response = """
+1. Practice Gratitude
+Write down three things you're grateful for, even if they're small. It could be something as simple as the warmth of your blanket or a good cup of coffee. Focusing on positive things can shift your mindset.
+
+2. Move Your Body
+Physical movement, even just a short walk, can release endorphins and improve your mood. If you can, try to get outside and breathe in some fresh air, even if it’s for just five minutes.
+
+3. Listen to Uplifting Music
+Music has a powerful impact on our emotions. Find a playlist of songs that make you feel good or are calming. Sometimes, music can speak when words fall short.
+
+4. Limit Social Media
+Sometimes, scrolling can make us feel worse. Try taking a short break from social media or setting a time limit. This can help reduce feelings of comparison or anxiety.
+
+5. Be Kind to Yourself
+When we’re feeling low, we can be really hard on ourselves. Remind yourself that it’s okay to feel sad sometimes, and that you're doing the best you can. Self-compassion can make a huge difference.
+
+6. Do Something Creative
+Whether it's doodling, journaling, cooking, or even organizing something in your space, creative activities can help get your mind off things and give you a sense of accomplishment.
+
+7. Connect with a Friend or Loved One
+Even a brief chat with someone you trust can help you feel more connected and supported. Sometimes sharing how you're feeling, even if it's just a little, can lighten the load.
+
+8. Practice Deep Breathing or Meditation
+Take five deep breaths, breathing in for a count of four and exhaling for a count of six. This can help lower stress levels and give your mind a reset. You could also try a short guided meditation to help calm your thoughts.
+
+9. Focus on What You Can Control
+When things feel overwhelming, focus on small, manageable tasks that are in your control. It can help you regain a sense of agency and accomplishment.
+
+10. Give Yourself a Break
+If you've been pushing yourself hard, it might be time for a pause. Take a few minutes (or more) to just rest and recharge—guilt-free. Your well-being matters.
+
+I hope some of these resonate with you! You don’t have to feel positive all the time, but even tiny steps can help lift you up. If you want to talk more, I’m here!
+
+"""
     
     return render(request, 'home.html', {'chat_response': chat_response})
 
@@ -121,7 +154,48 @@ def ai_support(request):
     chat_response = None
     if request.method == "POST":
         user_input = request.POST.get("user_input")
-        chat_response = analyze_emotion(user_input)  # Use your Vertex AI function here
+        chat_response = """
+1. Practice Gratitude
+Write down three things you're grateful for, even if they're small. It could be something as simple as the warmth of your blanket or a good cup of coffee. Focusing on positive things can shift your mindset.
+
+2. Move Your Body
+Physical movement, even just a short walk, can release endorphins and improve your mood. If you can, try to get outside and breathe in some fresh air, even if it’s for just five minutes.
+
+3. Listen to Uplifting Music
+Music has a powerful impact on our emotions. Find a playlist of songs that make you feel good or are calming. Sometimes, music can speak when words fall short.
+
+4. Limit Social Media
+Sometimes, scrolling can make us feel worse. Try taking a short break from social media or setting a time limit. This can help reduce feelings of comparison or anxiety.
+
+5. Be Kind to Yourself
+When we’re feeling low, we can be really hard on ourselves. Remind yourself that it’s okay to feel sad sometimes, and that you're doing the best you can. Self-compassion can make a huge difference.
+
+6. Do Something Creative
+Whether it's doodling, journaling, cooking, or even organizing something in your space, creative activities can help get your mind off things and give you a sense of accomplishment.
+
+7. Connect with a Friend or Loved One
+Even a brief chat with someone you trust can help you feel more connected and supported. Sometimes sharing how you're feeling, even if it's just a little, can lighten the load.
+
+8. Practice Deep Breathing or Meditation
+Take five deep breaths, breathing in for a count of four and exhaling for a count of six. This can help lower stress levels and give your mind a reset. You could also try a short guided meditation to help calm your thoughts.
+
+9. Focus on What You Can Control
+When things feel overwhelming, focus on small, manageable tasks that are in your control. It can help you regain a sense of agency and accomplishment.
+
+10. Give Yourself a Break
+If you've been pushing yourself hard, it might be time for a pause. Take a few minutes (or more) to just rest and recharge—guilt-free. Your well-being matters.
+
+I hope some of these resonate with you! You don’t have to feel positive all the time, but even tiny steps can help lift you up. If you want to talk more, I’m here!
+
+i very bat at this point
+
+
+"""
+          
+        
+        
+        
+          # Use your Vertex AI function here
     return render(request, "ai_support.html", {"chat_response": chat_response})
 
 
