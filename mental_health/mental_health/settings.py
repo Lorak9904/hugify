@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-f=phhac@18qbde19jw-@yh%q4^kw-bme4hq!j%p=idauol*o7g
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['hugify.onrender.com', 'localhost', '127.0.0.1']
 
 
 # Application definition
